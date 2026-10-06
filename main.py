@@ -44,11 +44,6 @@ student_ids = count(1)
 course_ids = count(1)
 enrollment_ids = count(1)
 
-# Seed data so enrollment can be tested immediately
-for name, email in [("Asha", "asha@example.com"), ("Ravi", "ravi@example.com")]:
-    sid = next(student_ids)
-    students[sid] = Student(id=sid, name=name, email=email)
-
 
 # ---------- Helpers ----------
 def get_student_or_404(student_id: int) -> Student:
